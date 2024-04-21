@@ -2,7 +2,9 @@ import React from 'react'
 import logo from "../assets/lo.jpg"
 import { MdShoppingCart } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const NavBar = () => {
+  const {cart} = useSelector((state) => state);
   return (
     <div className='w-[100%] border-b-2 border-sky-900'>
     <div className='flex justify-between items-center w-[1080px] h-[80px] mx-auto'>
@@ -15,9 +17,12 @@ const NavBar = () => {
           <NavLink to="/">
           <p>Home</p>
           </NavLink>
+            <div className='relative'>
             <NavLink to="/cart">
-            <MdShoppingCart />
+            <MdShoppingCart className='w-8 h-5'/>
+            <span className={`${cart.length >0 ? "absolute -right-2 -top-3 bg-green-600 rounded-full w-5 h-5 flex items-center justify-center" : ""}`}>{cart.length >0 ?cart.length : ""}</span>
             </NavLink>
+            </div>
         </div>
     </div>
     </div>

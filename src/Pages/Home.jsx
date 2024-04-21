@@ -21,7 +21,7 @@ const Home = () => {
       getProducts();
     },[]); 
   return (
-    <div className='w-[1080px] flex flex-wrap mx-auto gap-4 justify-between px-4'>
+    <div className='w-[1080px] flex flex-wrap mx-auto gap-4 justify-between px-4 '>
       {
         loading ? <Spinner/> : (
           posts.map((post, index)=> {

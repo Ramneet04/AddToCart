@@ -5,7 +5,7 @@ import Cart from "./Pages/Cart"
 
 function App() {
   return (
-    <div className=" min-h-screen bg-zinc-950 text-white w-full">
+    <div className=" min-h-screen bg-zinc-950 text-white w-full pb-14">
       <div>
         <NavBar/>
       </div>
